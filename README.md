@@ -1,6 +1,6 @@
 ## Instructions
 Please stick to the following instructions on how to submit your application:
-1. Read the whole README
+1. Read the **whole** README
 2. Fork our repository
 3. Add your solution **with all requirements** to your repository
 4. Create a pull request to our repository
@@ -15,7 +15,7 @@ Also note down in the end how many hours it took to complete (roughly). **Please
 Thank you very much!
 
 ## Main Task
-You are developing a new dashboard. Your task is to create a new dashboard with which you will be displaying and editing product information following
+Your task is to create a new dashboard with which you will be displaying and editing product information.
 
 First you have to setup the main dashboard with the main structure:
 - Header with [Innoloft Logo](https://img.innoloft.de/logo.svg)
@@ -37,15 +37,17 @@ It's not required that the main page has any content. **But it should be the def
   - Attributes
 - Description tab should contain product description
 - Attributes tab should contain:
-  - categories (name only, free text input when adding/editing)
-  - business models (name only, free text input when adding/editing)
-  - [TRL](https://en.wikipedia.org/wiki/Technology_readiness_level) (single choice field)
+  - categories (name only)
+  - business models (name only)
+  - [TRL](https://en.wikipedia.org/wiki/Technology_readiness_level)
 - User info should contain:
   - user image
   - user name
   - user company name
-- Map should display company address on Google maps
+- Map should display company address of the product
 
+### Editing Product
+It should be possible to edit the attributes of the product as well as add new once. The categories and business-models should be editable with a simple text input and the TRL with a dropdown.  
 For editing follow WYSIWYG methodology. When saving the product a PUT request has to be made to the API. Please keep in mind that the API itself **will not save your request**.
 ### Example Mockup
 ![mockup](mockup.jpg)
