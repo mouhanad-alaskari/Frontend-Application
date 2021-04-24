@@ -1,4 +1,4 @@
 export const StorageKeys = {
-  token: "LABOSHOP_ADMIN_TOKEN",
-  userContext: "LABOSHOP_ADMIN_USER",
+  token: "FRONTEDN_APPLICATION_TOKEN",
+  userContext: "FRONTEDN_APPLICATION_USER",
 };
