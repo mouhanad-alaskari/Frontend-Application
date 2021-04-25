@@ -10,7 +10,12 @@ const EmptyPage = () => {
 };
 
 export const RoutesList = [
-  { path: "/main", component: MainPage, exact: true },
-  { path: "/product", component: Product, exact: true },
-  { path: "/*", component: EmptyPage, exact: true },
+  { title: 'Main Page', path: "/main", component: MainPage, exact: true },
+  { title: 'Product', path: "/product", component: Product, exact: true },
+  { title: '', path: "/*", component: EmptyPage, exact: true },
+];
+
+export const NavList = [
+  { title: 'Main Page', path: "/main", },
+  { title: 'Product', path: "/product", },
 ];

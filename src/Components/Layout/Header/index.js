@@ -5,7 +5,7 @@ const Header = () => {
     const configuration = useSelector(state => state.account.configuration)
     return (
         <AppBar>
-            <Logo src={`${configuration?.logo}`} alt="logo" />
+            <Logo src={`${configuration?.logo}`} alt="innoloft logo" />
         </AppBar>
     )
 }
