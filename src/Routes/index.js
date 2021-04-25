@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useThemeContext } from '../Theme';
 import AccountActions from '../Redux/Actions/Account';
 import { RoutesList } from './RoutesList';
+import Loading from '../Components/UI/Loading';
 
 
 export default function Routes() {
@@ -36,16 +37,12 @@ export default function Routes() {
 
     if (account.loading) {
         return (
-            <div>
-                Loading ...
-            </div>
+           <Loading />
         );
     }
 
-    console.log({ account })
-
     return (
-        <Suspense fallback={(<div> Loading ...</div>)}>
+        <Suspense fallback={<Loading />}>
             <Switch>
                 {RoutesList.map((RouteObj, index) => {
                     return <Route key={index} {...RouteObj} />;
