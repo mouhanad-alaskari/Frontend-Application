@@ -18,7 +18,7 @@ export const metrics={
 	images: {
 		small: 20,
 		medium: 40,
-		large: 60,
+		large: 120,
 		logo: 200,
 	},
 };

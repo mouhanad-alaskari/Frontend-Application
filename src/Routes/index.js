@@ -6,6 +6,7 @@ import { useThemeContext } from '../Theme';
 import AccountActions from '../Redux/Actions/Account';
 import { RoutesList } from './RoutesList';
 import Loading from '../Components/UI/Loading';
+import Layout from '../Components/Layout';
 
 
 export default function Routes() {
@@ -16,7 +17,6 @@ export default function Routes() {
 
     useEffect(() => {
         dispatch(AccountActions.checkConfiguration());
-        return () => { }
     }, [dispatch]);
 
 
@@ -31,23 +31,24 @@ export default function Routes() {
                 },
             }))
         }
-        return () => { }
     }, [account.configuration, setTheme])
-
 
     if (account.loading) {
         return (
-           <Loading />
+            <Loading />
         );
     }
 
     return (
         <Suspense fallback={<Loading />}>
-            <Switch>
-                {RoutesList.map((RouteObj, index) => {
-                    return <Route key={index} {...RouteObj} />;
-                })}
-            </Switch>
+            <Layout>
+                <Switch>
+                    {RoutesList.map((RouteObj, index) => {
+                        return <Route key={index} {...RouteObj} />;
+                    })}
+                </Switch>
+            </Layout>
+
         </Suspense>
     )
 }
