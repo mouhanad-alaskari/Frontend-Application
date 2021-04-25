@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
+import { ThemeContextProvider } from './Theme';
 import { useStore } from './Hooks';
 import Routes from './Routes';
 
@@ -10,9 +11,11 @@ function App() {
   const store = useStore();
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      <ThemeContextProvider>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </ThemeContextProvider>
     </Provider>
   );
 }
