@@ -1,14 +1,14 @@
 import { useState, createContext, useContext } from 'react';
 import { ThemeProvider } from "styled-components";
 
-import Colors from "./Colors";
-import Font from "./Fonts";
-import Metrics from "./Metrics";
+import { colors } from "./Colors";
+import { fonts } from "./Fonts";
+import { metrics } from "./Metrics";
 
 const theme = {
-    Colors,
-    Font,
-    Metrics,
+    colors,
+    fonts,
+    metrics,
 };
 
 // initializing context

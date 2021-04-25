@@ -6,8 +6,6 @@ const size={
   large: '15px', 
 };
 
-const Fonts = {
+export const fonts = {
   size,
 };
-
-export default Fonts;

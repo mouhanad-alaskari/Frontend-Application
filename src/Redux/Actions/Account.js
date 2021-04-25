@@ -6,6 +6,10 @@ import Immutable from 'seamless-immutable';
 const { Types, Creators } = createActions(
   {
     checkConfiguration: null,
+
+    requestSucceeded: ['data'],
+    requestFailed: ['data'],
+
     logout: null,
     reset: null,
   },
@@ -22,14 +26,24 @@ export default Creators;
 export const INITIAL_STATE = Immutable({
   loading: false,
   errors: null,
-  configuration: {},
+  configuration: null,
 });
 
 /* ------------- Reducers ------------- */
 
 export const checkConfiguration = state => state.merge({ loading: true });
 
-export const logout = () => {};
+export const requestSucceeded = (state, {data}) => state.merge({
+  loading: false,
+  configuration: data,
+});
+
+export const requestFailed = (state, {errors}) => state.merge({
+  loading: false,
+  errors,
+});
+
+export const logout = () => { };
 
 export const reset = () => INITIAL_STATE;
 
@@ -37,6 +51,10 @@ export const reset = () => INITIAL_STATE;
 
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.CHECK_CONFIGURATION]: checkConfiguration,
+
+  [Types.REQUEST_SUCCEEDED]: requestSucceeded,
+  [Types.REQUEST_FAILED]: requestFailed,
+
   [Types.LOGOUT]: logout,
   [Types.RESET]: reset,
 });

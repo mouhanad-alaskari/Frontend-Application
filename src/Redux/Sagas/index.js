@@ -16,6 +16,6 @@ export default function* root() {
   yield all([
     takeLatest(StartupTypes.STARTUP, startupSagas.startup),
 
-    takeLatest(AccountTypes.CHECK_CONFIGURATION, accountSagas.checkConfiguration),
+    takeLatest(AccountTypes.CHECK_CONFIGURATION, accountSagas.checkStatus),
   ]);
 }

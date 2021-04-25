@@ -17,11 +17,7 @@ const requestsSourceCancellation = CancelToken.source();
 
 const endpoints = {
   general: {
-    configuration: (data, headers) =>
-      Api.get(`/configuration/${data.appID}/`,{}, {
-        ...headers,
-        cancelToken: requestsSourceCancellation.token,
-      }),
+    configuration: (data, headers) => Api.get(`/configuration/${data.AppID}/`,{}, { ...headers, cancelToken: requestsSourceCancellation.token,}),
   },
   
 };
