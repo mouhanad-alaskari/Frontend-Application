@@ -33,12 +33,12 @@ export const INITIAL_STATE = Immutable({
 
 export const checkConfiguration = state => state.merge({ loading: true });
 
-export const requestSucceeded = (state, {data}) => state.merge({
+export const requestSucceeded = (state, { data }) => state.merge({
   loading: false,
   configuration: data,
 });
 
-export const requestFailed = (state, {errors}) => state.merge({
+export const requestFailed = (state, { errors }) => state.merge({
   loading: false,
   errors,
 });

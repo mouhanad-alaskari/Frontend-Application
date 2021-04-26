@@ -18,7 +18,7 @@ import {
     Avatar,
     MapContainer,
     AvatarContainer,
-}from './styles';
+} from './styles';
 
 export default function Product() {
     const product = useSelector(state => state.product)
@@ -80,9 +80,9 @@ export default function Product() {
                     </AvatarContainer>
                 }
                 <MapContainer>
-                    <Map 
-                     latitude={product.product?.company?.address?.latitude}
-                     longitude={product.product?.company?.address?.longitude}
+                    <Map
+                        latitude={product.product?.company?.address?.latitude}
+                        longitude={product.product?.company?.address?.longitude}
                     />
                 </MapContainer>
 

@@ -17,14 +17,14 @@ const requestsSourceCancellation = CancelToken.source();
 
 const endpoints = {
   general: {
-    configuration: (data, headers) => Api.get(`/configuration/${data.AppID}/`,{}, { ...headers, cancelToken: requestsSourceCancellation.token,}),
+    configuration: (data, headers) => Api.get(`/configuration/${data.AppID}/`, {}, { ...headers, cancelToken: requestsSourceCancellation.token, }),
   },
   product: {
-    getOne: (data, headers) => Api.get(`/product/6781/`,{}, { ...headers, cancelToken: requestsSourceCancellation.token,}),
-    getTrl: (data, headers) => Api.get(`/trl/`,{}, { ...headers, cancelToken: requestsSourceCancellation.token,}),
-    put: (data, headers) => Api.put(`/product/6781/`,data, { ...headers, cancelToken: requestsSourceCancellation.token,}),
+    getOne: (data, headers) => Api.get(`/product/6781/`, {}, { ...headers, cancelToken: requestsSourceCancellation.token, }),
+    getTrl: (data, headers) => Api.get(`/trl/`, {}, { ...headers, cancelToken: requestsSourceCancellation.token, }),
+    put: (data, headers) => Api.put(`/product/6781/`, data, { ...headers, cancelToken: requestsSourceCancellation.token, }),
   }
-  
+
 };
 
 export default endpoints;

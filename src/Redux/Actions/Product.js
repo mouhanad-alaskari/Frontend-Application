@@ -41,18 +41,18 @@ export const getTrl = state => state.merge({ loading: true });
 
 export const put = state => state.merge({ loading: true });
 
-export const requestSucceeded = (state, {data}) => state.merge({
+export const requestSucceeded = (state, { data }) => state.merge({
   loading: false,
   product: data,
 });
 
-export const trlRequestSucceeded = (state, {data}) => state.merge({
+export const trlRequestSucceeded = (state, { data }) => state.merge({
   loading: false,
   trl: data,
 });
 
 
-export const requestFailed = (state, {errors}) => state.merge({
+export const requestFailed = (state, { errors }) => state.merge({
   loading: false,
   errors,
 });

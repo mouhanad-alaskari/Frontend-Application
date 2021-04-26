@@ -1,4 +1,4 @@
-export const metrics={
+export const metrics = {
 	marginHorizontal: 10,
 	marginVertical: 10,
 	section: 25,

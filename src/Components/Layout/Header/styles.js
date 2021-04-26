@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import { device } from '../../../Theme/BreakPoints';
 
 export const AppBar = styled.section`
-position: fixed;
-left: 0;
-top: 0;
-width: 100%;
-background-color: ${props => props.theme.colors.primary};
-height: 75px;
-z-index: 1;
-border: 1px solid ${props => props.theme.colors.secondary};
-display: flex;
-justify-content: 'space-between';
-align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: ${props => props.theme.colors.primary};
+    height: 75px;
+    z-index: 1;
+    border: 1px solid ${props => props.theme.colors.secondary};
+    display: flex;
+    justify-content: 'space-between';
+    align-items: center;
 `;
 
 export const Logo = styled.img`

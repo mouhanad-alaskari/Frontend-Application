@@ -20,12 +20,12 @@ export const Row = styled.section`
    color: ${props => ( props.active === true ? props.theme.colors.primary : props.theme.colors.gray[1] )};
    font-weight: bold;
    font-size: ${props => props.theme.fonts.size.large};
-   &:hover {
-    background-color: ${props => props.theme.colors.gray[2]};
-    color: ${props => props.theme.colors.secondary}
-  }
-`;
 
+    &:hover {
+      background-color: ${props => props.theme.colors.gray[2]};
+      color: ${props => props.theme.colors.secondary}
+    }
+`;
 
 export const styles = {
     color: colors.secondary,

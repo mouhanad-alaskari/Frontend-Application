@@ -6,15 +6,12 @@ function Layout({ children }) {
     return (
         <div style={styles.root}>
             <Header />
-
             <div style={styles.container}>
-            <SideBar />
-            <div>
-                {children}
+                <SideBar />
+                <div>
+                    {children}
+                </div>
             </div>
-            </div>
-            
-
         </div>
     )
 }

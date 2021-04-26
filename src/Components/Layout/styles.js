@@ -1,11 +1,11 @@
 const styles = {
-    root: {
-      height  : "100vh",
-      zIndex: 1,
-      overflow: 'hidden',
-      position: 'relative',
-      display: 'flex',
-      flexDirection: 'column',
+  root: {
+    height: "100vh",
+    zIndex: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
   },
   container: {
     marginTop: 75,

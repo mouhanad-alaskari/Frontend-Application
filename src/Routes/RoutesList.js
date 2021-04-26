@@ -1,13 +1,6 @@
 import MainPage from '../Screens/MainPage';
 import Product from '../Screens/Product';
-
-const EmptyPage = () => {
-  return (
-    <div>
-      NOT FOUND!!
-    </div>
-  );
-};
+import EmptyPage from '../Components/UI/EmptyPage';
 
 export const RoutesList = [
   { title: 'Main Page', path: "/main", component: MainPage, exact: true },

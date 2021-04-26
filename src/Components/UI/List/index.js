@@ -1,4 +1,4 @@
-export default function List({title, arr}) {
+export default function List({ title, arr }) {
     return (
         <div>
             <p>{title}</p>

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
- 
+
 import { Side, Row } from './styles';
 import { NavList } from '../../../Routes/RoutesList';
 
@@ -21,7 +21,7 @@ export default function SideBar() {
         <Side>
             {Object.keys(NavList).map((key, index) => {
                 return (
-                    <Row onClick={() => handleChange(key)} active={active===key}>
+                    <Row onClick={() => handleChange(key)} active={active === key}>
                         {NavList[key].title}
                     </Row>
                 );
