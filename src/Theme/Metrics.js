@@ -3,7 +3,7 @@ export const metrics={
 	marginVertical: 10,
 	section: 25,
 	baseMargin: 10,
-	doubleBaseMargin: 20,
+	doubleBaseMargin: 30,
 	smallMargin: 5,
 	doubleSection: 50,
 	horizontalLineHeight: 1,
@@ -18,7 +18,7 @@ export const metrics={
 	images: {
 		small: 20,
 		medium: 40,
-		large: 120,
+		large: 140,
 		logo: 200,
 	},
 };

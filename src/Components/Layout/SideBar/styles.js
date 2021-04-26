@@ -12,7 +12,6 @@ export const Side = styled.aside`
 `;
 
 export const Row = styled.section`
-   margin-top: 40px;
    width: 100%;
    height: 60px;
    text-align: center;
