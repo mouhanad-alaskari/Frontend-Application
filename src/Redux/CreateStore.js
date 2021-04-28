@@ -12,11 +12,11 @@ const configureStore = (rootReducer, rootSaga) => {
   // Push middlewares
   enhancers.push(applyMiddleware(...middleware));
 
-  //const store = createStore(rootReducer, compose(...enhancers));
-  const store = createStore(
-    rootReducer,
-    compose(...enhancers, !!window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-  );
+  const store = createStore(rootReducer, compose(...enhancers));
+  // const store = createStore(
+  //   rootReducer,
+  //   compose(...enhancers, !!window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  // );
 
   // kick off root saga
   sagaMiddleware.run(rootSaga);
